@@ -18,7 +18,7 @@ function CreatePost() {
       });
       navigate('/');
     } catch (err) {
-      setError('Failed to create post');
+      setError(err.response?.data?.message || 'Failed to create post');
     }
   };
 

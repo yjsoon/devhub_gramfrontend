@@ -15,7 +15,7 @@ function Home() {
         setPosts(response.data.posts);
         setLoading(false);
       } catch (err) {
-        setError('Failed to fetch posts');
+        setError(err.response?.data?.message || 'Failed to fetch post');
         setLoading(false);
       }
     };
